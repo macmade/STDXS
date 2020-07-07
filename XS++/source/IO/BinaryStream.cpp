@@ -30,7 +30,6 @@
 #include <fstream>
 #include <cmath>
 #include <XS/IO/BinaryStream.hpp>
-#include <XS/Casts.hpp>
 
 namespace XS
 {
@@ -53,11 +52,6 @@ namespace XS
             this->seek( numeric_cast< ssize_t >( cur ), SeekDirection::Begin );
             
             return pos - cur;
-        }
-        
-        void BinaryStream::seek( size_t offset )
-        {
-            this->seek( numeric_cast< ssize_t >( offset ) );
         }
         
         void BinaryStream::seek( ssize_t offset )

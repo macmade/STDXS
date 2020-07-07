@@ -33,6 +33,8 @@
 #include <string>
 #include <cstdint>
 #include <vector>
+#include <type_traits>
+#include <XS/Casts.hpp>
 
 namespace XS
 {
@@ -62,14 +64,25 @@ namespace XS
                 virtual void       setPreferredEndianness( Endianness value ) = 0;
                 
                 virtual void   read( uint8_t * buf, size_t size )        = 0;
-                virtual void   seek( ssize_t offset, SeekDirection dir ) = 0;
                 virtual size_t tell()                              const = 0;
+                virtual void   seek( ssize_t offset, SeekDirection dir ) = 0;
                 
                 bool   hasBytesAvailable();
                 size_t availableBytes();
                 
-                void seek( size_t offset );
                 void seek( ssize_t offset );
+                
+                template< typename T, typename std::enable_if< std::is_integral< T >::value && std::is_unsigned< T >::value >::type * = nullptr >
+                void seek( T offset )
+                {
+                    this->seek( numeric_cast< ssize_t >( offset ) );
+                }
+                
+                template< typename T, typename std::enable_if< std::is_integral< T >::value && std::is_unsigned< T >::value >::type * = nullptr >
+                void seek( T offset, SeekDirection dir )
+                {
+                    this->seek( numeric_cast< ssize_t >( offset ), dir );
+                }
                 
                 std::vector< uint8_t > read( size_t size );
                 std::vector< uint8_t > readAll();
