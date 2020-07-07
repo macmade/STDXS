@@ -23,17 +23,23 @@
  ******************************************************************************/
 
 /*!
- * @header      XS.hpp
+ * @file        Info-Object.cpp
  * @copyright   (c) 2020, Jean-David Gadina - www.xs-labs.com
  */
 
-#ifndef XS_HPP
-#define XS_HPP
-
-#include <XS/Casts.hpp>
 #include <XS/Info.hpp>
-#include <XS/IO/BinaryStream.hpp>
-#include <XS/IO/BinaryFileStream.hpp>
-#include <XS/IO/BinaryDataStream.hpp>
 
-#endif /* XS_HPP */
+namespace XS
+{
+    Info::Object::operator Info() const
+    {
+        return this->getInfo();
+    }
+    
+    std::ostream & operator <<( std::ostream & os, const Info::Object & o )
+    {
+        os << o.getInfo();
+        
+        return os;
+    }
+}
