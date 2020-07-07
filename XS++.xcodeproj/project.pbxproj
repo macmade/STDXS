@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05C8C32724AE1C040095E313 /* XS.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C32624AE1C040095E313 /* XS.hpp */; };
+		05C8C47224B510700095E313 /* BinaryFileStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C46F24B510700095E313 /* BinaryFileStream.cpp */; };
+		05C8C47324B510700095E313 /* BinaryDataStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C47024B510700095E313 /* BinaryDataStream.cpp */; };
+		05C8C47424B510700095E313 /* BinaryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C47124B510700095E313 /* BinaryStream.cpp */; };
+		05C8C47924B510760095E313 /* BinaryFileStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C47624B510760095E313 /* BinaryFileStream.hpp */; };
+		05C8C47A24B510760095E313 /* BinaryDataStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C47724B510760095E313 /* BinaryDataStream.hpp */; };
+		05C8C47B24B510760095E313 /* BinaryStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C47824B510760095E313 /* BinaryStream.hpp */; };
+		05C8C47D24B511310095E313 /* Casts.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C47C24B511310095E313 /* Casts.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +64,13 @@
 		055C8EF3246075A80099DFF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05C8C31124AE1B030095E313 /* libXS++.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libXS++.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C8C32624AE1C040095E313 /* XS.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XS.hpp; sourceTree = "<group>"; };
+		05C8C46F24B510700095E313 /* BinaryFileStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryFileStream.cpp; sourceTree = "<group>"; };
+		05C8C47024B510700095E313 /* BinaryDataStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryDataStream.cpp; sourceTree = "<group>"; };
+		05C8C47124B510700095E313 /* BinaryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryStream.cpp; sourceTree = "<group>"; };
+		05C8C47624B510760095E313 /* BinaryFileStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryFileStream.hpp; sourceTree = "<group>"; };
+		05C8C47724B510760095E313 /* BinaryDataStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryDataStream.hpp; sourceTree = "<group>"; };
+		05C8C47824B510760095E313 /* BinaryStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryStream.hpp; sourceTree = "<group>"; };
+		05C8C47C24B511310095E313 /* Casts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Casts.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +246,7 @@
 		05C8C32024AE1BBE0095E313 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				05C8C46E24B510700095E313 /* IO */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -239,8 +254,30 @@
 		05C8C46D24B50ED70095E313 /* XS */ = {
 			isa = PBXGroup;
 			children = (
+				05C8C47C24B511310095E313 /* Casts.hpp */,
+				05C8C47524B510760095E313 /* IO */,
 			);
 			path = XS;
+			sourceTree = "<group>";
+		};
+		05C8C46E24B510700095E313 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				05C8C46F24B510700095E313 /* BinaryFileStream.cpp */,
+				05C8C47024B510700095E313 /* BinaryDataStream.cpp */,
+				05C8C47124B510700095E313 /* BinaryStream.cpp */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		05C8C47524B510760095E313 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				05C8C47624B510760095E313 /* BinaryFileStream.hpp */,
+				05C8C47724B510760095E313 /* BinaryDataStream.hpp */,
+				05C8C47824B510760095E313 /* BinaryStream.hpp */,
+			);
+			path = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +287,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C8C47A24B510760095E313 /* BinaryDataStream.hpp in Headers */,
+				05C8C47D24B511310095E313 /* Casts.hpp in Headers */,
 				05C8C32724AE1C040095E313 /* XS.hpp in Headers */,
+				05C8C47924B510760095E313 /* BinaryFileStream.hpp in Headers */,
+				05C8C47B24B510760095E313 /* BinaryStream.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C8C47324B510700095E313 /* BinaryDataStream.cpp in Sources */,
+				05C8C47424B510700095E313 /* BinaryStream.cpp in Sources */,
+				05C8C47224B510700095E313 /* BinaryFileStream.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
