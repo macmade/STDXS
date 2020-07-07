@@ -1,0 +1,5 @@
+language: objective-c
+script:
+- set -o pipefail && xcodebuild -project "XS++.xcodeproj" -scheme "XS++" build analyze
+notifications:
+    slack: xs-labs:FXh1yLXNkpcVxKZhZU6icdhI
