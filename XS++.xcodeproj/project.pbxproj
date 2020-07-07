@@ -22,6 +22,10 @@
 		05C8C48D24B5140D0095E313 /* ToString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C48C24B5140D0095E313 /* ToString.cpp */; };
 		05C8C49124B515560095E313 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C49024B515560095E313 /* Color.cpp */; };
 		05C8C49324B5155D0095E313 /* Color.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49224B5155D0095E313 /* Color.hpp */; };
+		05C8C49624B5176B0095E313 /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C49424B5176B0095E313 /* Screen.cpp */; };
+		05C8C49724B5176B0095E313 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C49524B5176B0095E313 /* Window.cpp */; };
+		05C8C49A24B517860095E313 /* Window.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49824B517860095E313 /* Window.hpp */; };
+		05C8C49B24B517860095E313 /* Screen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49924B517860095E313 /* Screen.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +89,10 @@
 		05C8C48C24B5140D0095E313 /* ToString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToString.cpp; sourceTree = "<group>"; };
 		05C8C49024B515560095E313 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
 		05C8C49224B5155D0095E313 /* Color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
+		05C8C49424B5176B0095E313 /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		05C8C49524B5176B0095E313 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		05C8C49824B517860095E313 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		05C8C49924B517860095E313 /* Screen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				05C8C49224B5155D0095E313 /* Color.hpp */,
+				05C8C49924B517860095E313 /* Screen.hpp */,
+				05C8C49824B517860095E313 /* Window.hpp */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -313,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				05C8C49024B515560095E313 /* Color.cpp */,
+				05C8C49424B5176B0095E313 /* Screen.cpp */,
+				05C8C49524B5176B0095E313 /* Window.cpp */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -324,11 +336,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C8C49B24B517860095E313 /* Screen.hpp in Headers */,
 				05C8C47A24B510760095E313 /* BinaryDataStream.hpp in Headers */,
 				05C8C47D24B511310095E313 /* Casts.hpp in Headers */,
 				05C8C32724AE1C040095E313 /* XS.hpp in Headers */,
 				05C8C47924B510760095E313 /* BinaryFileStream.hpp in Headers */,
 				05C8C48124B512670095E313 /* Info.hpp in Headers */,
+				05C8C49A24B517860095E313 /* Window.hpp in Headers */,
 				05C8C48B24B514070095E313 /* ToString.hpp in Headers */,
 				05C8C49324B5155D0095E313 /* Color.hpp in Headers */,
 				05C8C47B24B510760095E313 /* BinaryStream.hpp in Headers */,
@@ -395,6 +409,8 @@
 				05C8C49124B515560095E313 /* Color.cpp in Sources */,
 				05C8C47324B510700095E313 /* BinaryDataStream.cpp in Sources */,
 				05C8C48D24B5140D0095E313 /* ToString.cpp in Sources */,
+				05C8C49624B5176B0095E313 /* Screen.cpp in Sources */,
+				05C8C49724B5176B0095E313 /* Window.cpp in Sources */,
 				05C8C48924B513690095E313 /* Info-Object.cpp in Sources */,
 				05C8C48624B512730095E313 /* Info.cpp in Sources */,
 				05C8C47424B510700095E313 /* BinaryStream.cpp in Sources */,

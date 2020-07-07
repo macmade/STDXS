@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  * 
- * Copyright (c) 2020 Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2019 Jean-David Gadina - www.xs-labs.com
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,21 +23,53 @@
  ******************************************************************************/
 
 /*!
- * @header      XS.hpp
+ * @header      Window.hpp
  * @copyright   (c) 2020, Jean-David Gadina - www.xs-labs.com
  */
 
-#ifndef XS_HPP
-#define XS_HPP
+#ifndef XS_UI_WINDOW_HPP
+#define XS_UI_WINDOW_HPP
 
-#include <XS/Casts.hpp>
-#include <XS/Info.hpp>
-#include <XS/IO/BinaryStream.hpp>
-#include <XS/IO/BinaryFileStream.hpp>
-#include <XS/IO/BinaryDataStream.hpp>
-#include <XS/ToString.hpp>
+#include <memory>
+#include <algorithm>
+#include <cstdlib>
+#include <string>
 #include <XS/UI/Color.hpp>
-#include <XS/UI/Screen.hpp>
-#include <XS/UI/Window.hpp>
 
-#endif /* XS_HPP */
+namespace XS
+{
+    namespace UI
+    {
+        class Window
+        {
+            public:
+                
+                Window( size_t x, size_t y, size_t width, size_t height );
+                Window( const Window & o );
+                Window( Window && o ) noexcept;
+                ~Window( void );
+                
+                Window & operator =( Window o );
+                
+                void refresh( void );
+                void move( size_t x, size_t y );
+                void print( const std::string & s );
+                void print( const char * format, ... );
+                void print( const Color & color, const std::string & s );
+                void print( const Color & color, const char * format, ... );
+                void box( void );
+                void addHorizontalLine( size_t width );
+                void addVerticalLine( size_t height );
+                
+                friend void swap( Window & o1, Window & o2 );
+                
+            private:
+                
+                class IMPL;
+                
+                std::unique_ptr< IMPL > impl;
+        };
+    }
+}
+
+#endif /* XS_UI_WINDOW_HPP */
