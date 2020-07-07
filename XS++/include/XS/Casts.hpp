@@ -26,6 +26,8 @@
 #define XS_CASTS_HPP
 
 #include <type_traits>
+#include <limits>
+#include <stdexcept>
 
 namespace XS
 {
