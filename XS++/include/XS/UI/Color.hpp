@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  * 
- * Copyright (c) 2020 Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2019 Jean-David Gadina - www.xs-labs.com
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,19 +23,53 @@
  ******************************************************************************/
 
 /*!
- * @header      XS.hpp
+ * @header      Color.hpp
  * @copyright   (c) 2020, Jean-David Gadina - www.xs-labs.com
  */
 
-#ifndef XS_HPP
-#define XS_HPP
+#ifndef XS_UI_COLOR_HPP
+#define XS_UI_COLOR_HPP
 
-#include <XS/Casts.hpp>
-#include <XS/Info.hpp>
-#include <XS/IO/BinaryStream.hpp>
-#include <XS/IO/BinaryFileStream.hpp>
-#include <XS/IO/BinaryDataStream.hpp>
-#include <XS/ToString.hpp>
-#include <XS/UI/Color.hpp>
+#include <memory>
+#include <algorithm>
 
-#endif /* XS_HPP */
+namespace XS
+{
+    namespace UI
+    {
+        class Color
+        {
+            public:
+                
+                static Color clear( void );
+                static Color black( void );
+                static Color red( void );
+                static Color green( void );
+                static Color yellow( void );
+                static Color blue( void );
+                static Color magenta( void );
+                static Color cyan( void );
+                static Color white( void );
+                
+                Color( const Color & o );
+                Color( Color && o ) noexcept;
+                ~Color( void );
+                
+                Color & operator =( Color o );
+                
+                int index( void ) const;
+                
+                friend void swap( Color & o1, Color & o2 );
+                
+            private:
+                
+                explicit Color( int index );
+                
+                class IMPL;
+                
+                std::unique_ptr< IMPL > impl;
+        };
+    }
+}
+
+#endif /* XS_UI_COLOR_HPP */
