@@ -18,6 +18,8 @@
 		05C8C48124B512670095E313 /* Info.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C47E24B512670095E313 /* Info.hpp */; };
 		05C8C48624B512730095E313 /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C48324B512730095E313 /* Info.cpp */; };
 		05C8C48924B513690095E313 /* Info-Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C48824B513690095E313 /* Info-Object.cpp */; };
+		05C8C48B24B514070095E313 /* ToString.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C48A24B514070095E313 /* ToString.hpp */; };
+		05C8C48D24B5140D0095E313 /* ToString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C48C24B5140D0095E313 /* ToString.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		05C8C47E24B512670095E313 /* Info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Info.hpp; sourceTree = "<group>"; };
 		05C8C48324B512730095E313 /* Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Info.cpp; sourceTree = "<group>"; };
 		05C8C48824B513690095E313 /* Info-Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Info-Object.cpp"; sourceTree = "<group>"; };
+		05C8C48A24B514070095E313 /* ToString.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ToString.hpp; sourceTree = "<group>"; };
+		05C8C48C24B5140D0095E313 /* ToString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToString.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,7 @@
 				05C8C48824B513690095E313 /* Info-Object.cpp */,
 				05C8C48324B512730095E313 /* Info.cpp */,
 				05C8C46E24B510700095E313 /* IO */,
+				05C8C48C24B5140D0095E313 /* ToString.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				05C8C47C24B511310095E313 /* Casts.hpp */,
 				05C8C47E24B512670095E313 /* Info.hpp */,
 				05C8C47524B510760095E313 /* IO */,
+				05C8C48A24B514070095E313 /* ToString.hpp */,
 			);
 			path = XS;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 				05C8C32724AE1C040095E313 /* XS.hpp in Headers */,
 				05C8C47924B510760095E313 /* BinaryFileStream.hpp in Headers */,
 				05C8C48124B512670095E313 /* Info.hpp in Headers */,
+				05C8C48B24B514070095E313 /* ToString.hpp in Headers */,
 				05C8C47B24B510760095E313 /* BinaryStream.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05C8C47324B510700095E313 /* BinaryDataStream.cpp in Sources */,
+				05C8C48D24B5140D0095E313 /* ToString.cpp in Sources */,
 				05C8C48924B513690095E313 /* Info-Object.cpp in Sources */,
 				05C8C48624B512730095E313 /* Info.cpp in Sources */,
 				05C8C47424B510700095E313 /* BinaryStream.cpp in Sources */,

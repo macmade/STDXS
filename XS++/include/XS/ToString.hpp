@@ -23,18 +23,56 @@
  ******************************************************************************/
 
 /*!
- * @header      XS.hpp
+ * @header      ToString.hpp
  * @copyright   (c) 2020, Jean-David Gadina - www.xs-labs.com
  */
 
-#ifndef XS_HPP
-#define XS_HPP
+#ifndef XS_TO_STRING_HPP
+#define XS_TO_STRING_HPP
 
-#include <XS/Casts.hpp>
-#include <XS/Info.hpp>
-#include <XS/IO/BinaryStream.hpp>
-#include <XS/IO/BinaryFileStream.hpp>
-#include <XS/IO/BinaryDataStream.hpp>
-#include <XS/ToString.hpp>
+#include <type_traits>
+#include <ios>
+#include <sstream>
+#include <iomanip>
+#include <string>
+#include <vector>
 
-#endif /* XS_HPP */
+namespace XS
+{
+    namespace ToString
+    {
+        std::string Size( uint64_t size );
+        std::string Filename( const std::string & path );
+        std::string UUID( const uint8_t * bytes );
+        std::string DateTime( uint32_t value );
+        std::string DateTime( uint64_t value );
+        std::string DateTime( int32_t value );
+        std::string DateTime( int64_t value );
+        
+        template
+        <
+            typename _T_,
+            typename std::enable_if
+            <
+                   std::is_integral< _T_ >::value
+                && std::is_unsigned< _T_ >::value
+            >
+            ::type * = nullptr
+        >
+        std::string Hex( _T_ value )
+        {
+            std::stringstream ss;
+            
+            ss << "0x"
+               << std::setfill( '0' )
+               << std::setw( sizeof( _T_ ) * 2 )
+               << std::hex
+               << std::uppercase
+               << value;
+            
+            return ss.str();
+        }
+    }
+}
+
+#endif /* XS_TO_STRING_HPP */
