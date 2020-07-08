@@ -63,6 +63,8 @@ namespace XS
             std::string         value()    const;
             std::vector< Info > children() const;
             
+            void removeLevel( size_t level );
+            
             std::string toString( size_t level = 0, size_t align = 0 ) const;
             
             friend void swap( Info & o1, Info & o2 );

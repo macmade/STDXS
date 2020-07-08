@@ -118,6 +118,33 @@ namespace XS
         return this->impl->_children;
     }
     
+    void Info::removeLevel( size_t level )
+    {
+        std::function< void( XS::Info &, size_t ) > remove;
+        
+        if( level == 0 )
+        {
+            this->impl->_children = {};
+        }
+        
+        remove = [ & ]( XS::Info & i, size_t current )
+        {
+            if( current < level )
+            {
+                for( auto & child: i.impl->_children )
+                {
+                    remove( child, current + 1 );
+                }
+            }
+            else
+            {
+                i.children( {} );
+            }
+        };
+        
+        remove( *( this ), 1 );
+    }
+    
     std::string Info::toString( size_t level, size_t align ) const
     {
         std::stringstream ss;
