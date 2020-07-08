@@ -397,28 +397,6 @@ namespace XS
             return integer + fractional;
         }
         
-        std::string BinaryStream::readNULLTerminatedString()
-        {
-            char        c;
-            std::string s;
-            
-            while( 1 )
-            {
-                c = 0;
-                
-                this->read( reinterpret_cast< uint8_t * >( &c ), 1 );
-                
-                if( c == 0 )
-                {
-                    break;
-                }
-                
-                s.append( 1, c );
-            }
-            
-            return s;
-        }
-        
         std::string BinaryStream::readPascalString()
         {
             uint8_t     length;
@@ -445,6 +423,48 @@ namespace XS
             this->read( reinterpret_cast< uint8_t * >( &( cp[ 0 ] ) ), length );
             
             return &( cp[ 0 ] );
+        }
+        
+        std::string BinaryStream::readNULLTerminatedString()
+        {
+            char        c;
+            std::string s;
+            
+            while( 1 )
+            {
+                c = 0;
+                
+                this->read( reinterpret_cast< uint8_t * >( &c ), 1 );
+                
+                if( c == 0 )
+                {
+                    break;
+                }
+                
+                s.append( 1, c );
+            }
+            
+            return s;
+        }
+        
+        std::u16string BinaryStream::readNULLTerminatedUTF16String()
+        {
+            char16_t       c;
+            std::u16string s;
+            
+            while( 1 )
+            {
+                c = this->readUInt16();
+                
+                if( c == 0x0000 )
+                {
+                    break;
+                }
+                
+                s.append( 1, c );
+            }
+            
+            return s;
         }
     }
 }

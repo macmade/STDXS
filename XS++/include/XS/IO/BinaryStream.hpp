@@ -105,9 +105,10 @@ namespace XS
                 float readBigEndianFixedPoint( unsigned int integerLength, unsigned int fractionalLength );
                 float readLittleEndianFixedPoint( unsigned int integerLength, unsigned int fractionalLength );
                 
-                std::string readNULLTerminatedString();
-                std::string readPascalString();
-                std::string readString( size_t length );
+                std::string    readPascalString();
+                std::string    readString( size_t length );
+                std::string    readNULLTerminatedString();
+                std::u16string readNULLTerminatedUTF16String();
         };
     }
 }
