@@ -26,6 +26,8 @@
 		05C8C49724B5176B0095E313 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C49524B5176B0095E313 /* Window.cpp */; };
 		05C8C49A24B517860095E313 /* Window.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49824B517860095E313 /* Window.hpp */; };
 		05C8C49B24B517860095E313 /* Screen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49924B517860095E313 /* Screen.hpp */; };
+		05F15FB924B63C4400CA134E /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F15FB724B63C4400CA134E /* String.cpp */; };
+		05F15FBA24B63C4400CA134E /* String.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05F15FB824B63C4400CA134E /* String.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		05C8C49524B5176B0095E313 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		05C8C49824B517860095E313 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		05C8C49924B517860095E313 /* Screen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
+		05F15FB724B63C4400CA134E /* String.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
+		05F15FB824B63C4400CA134E /* String.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = String.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,7 @@
 				05C8C48824B513690095E313 /* Info-Object.cpp */,
 				05C8C48324B512730095E313 /* Info.cpp */,
 				05C8C46E24B510700095E313 /* IO */,
+				05F15FB724B63C4400CA134E /* String.cpp */,
 				05C8C48C24B5140D0095E313 /* ToString.cpp */,
 				05C8C48F24B515220095E313 /* UI */,
 			);
@@ -283,6 +288,7 @@
 				05C8C47C24B511310095E313 /* Casts.hpp */,
 				05C8C47E24B512670095E313 /* Info.hpp */,
 				05C8C47524B510760095E313 /* IO */,
+				05F15FB824B63C4400CA134E /* String.hpp */,
 				05C8C48A24B514070095E313 /* ToString.hpp */,
 				05C8C48E24B5151C0095E313 /* UI */,
 			);
@@ -340,6 +346,7 @@
 				05C8C47A24B510760095E313 /* BinaryDataStream.hpp in Headers */,
 				05C8C47D24B511310095E313 /* Casts.hpp in Headers */,
 				05C8C32724AE1C040095E313 /* XS.hpp in Headers */,
+				05F15FBA24B63C4400CA134E /* String.hpp in Headers */,
 				05C8C47924B510760095E313 /* BinaryFileStream.hpp in Headers */,
 				05C8C48124B512670095E313 /* Info.hpp in Headers */,
 				05C8C49A24B517860095E313 /* Window.hpp in Headers */,
@@ -408,6 +415,7 @@
 			files = (
 				05C8C49124B515560095E313 /* Color.cpp in Sources */,
 				05C8C47324B510700095E313 /* BinaryDataStream.cpp in Sources */,
+				05F15FB924B63C4400CA134E /* String.cpp in Sources */,
 				05C8C48D24B5140D0095E313 /* ToString.cpp in Sources */,
 				05C8C49624B5176B0095E313 /* Screen.cpp in Sources */,
 				05C8C49724B5176B0095E313 /* Window.cpp in Sources */,

@@ -23,22 +23,36 @@
  ******************************************************************************/
 
 /*!
- * @header      XS.hpp
+ * @file        String.cpp
  * @copyright   (c) 2020, Jean-David Gadina - www.xs-labs.com
  */
 
-#ifndef XS_HPP
-#define XS_HPP
-
-#include <XS/Casts.hpp>
-#include <XS/Info.hpp>
-#include <XS/IO/BinaryStream.hpp>
-#include <XS/IO/BinaryFileStream.hpp>
-#include <XS/IO/BinaryDataStream.hpp>
 #include <XS/String.hpp>
-#include <XS/ToString.hpp>
-#include <XS/UI/Color.hpp>
-#include <XS/UI/Screen.hpp>
-#include <XS/UI/Window.hpp>
 
-#endif /* XS_HPP */
+namespace XS
+{
+    namespace String
+    {
+        std::string ReplaceAll( const std::string & str, const std::string & search, const std::string & replace )
+        {
+            if( search == replace || search.length() == 0 )
+            {
+                return str;
+            }
+            
+            {
+                std::string            s( str );
+                std::string::size_type pos( 0 );
+                
+                while( ( pos = s.find( search, pos ) ) != std::string::npos )
+                {
+                    s.replace( pos, search.length(), replace );
+                    
+                    pos += replace.length();
+                }
+                
+                return s;
+            }
+        }
+    }
+}
