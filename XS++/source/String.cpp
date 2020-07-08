@@ -28,6 +28,9 @@
  */
 
 #include <XS/String.hpp>
+#include <locale>
+#include <codecvt>
+#include <cctype>
 
 namespace XS
 {
@@ -52,6 +55,62 @@ namespace XS
                 }
                 
                 return s;
+            }
+        }
+        
+        std::optional< std::u16string > ToUTF16( const std::string & str )
+        {
+            try
+            {
+                std::wstring_convert< std::codecvt_utf8< char16_t >, char16_t > c;
+                
+                return c.from_bytes( str );
+            }
+            catch( ... )
+            {
+                return {};
+            }
+        }
+        
+        std::optional< std::u32string > ToUTF32( const std::string & str )
+        {
+            try
+            {
+                std::wstring_convert< std::codecvt_utf8< char32_t >, char32_t > c;
+                
+                return c.from_bytes( str );
+            }
+            catch( ... )
+            {
+                return {};
+            }
+        }
+        
+        std::optional< std::string > FromUTF16( const std::u16string & str )
+        {
+            try
+            {
+                std::wstring_convert< std::codecvt_utf8< char16_t >, char16_t > c;
+                
+                return c.to_bytes( str );
+            }
+            catch( ... )
+            {
+                return {};
+            }
+        }
+        
+        std::optional< std::string > FromUTF32( const std::u32string & str )
+        {
+            try
+            {
+                std::wstring_convert< std::codecvt_utf8< char32_t >, char32_t > c;
+                
+                return c.to_bytes( str );
+            }
+            catch( ... )
+            {
+                return {};
             }
         }
     }

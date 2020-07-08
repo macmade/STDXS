@@ -31,12 +31,18 @@
 #define XS_STRING_HPP
 
 #include <string>
+#include <optional>
 
 namespace XS
 {
     namespace String
     {
         std::string ReplaceAll( const std::string & str, const std::string & search, const std::string & replace );
+        
+        std::optional< std::u16string > ToUTF16(   const std::string    & str );
+        std::optional< std::u32string > ToUTF32(   const std::string    & str );
+        std::optional< std::string >    FromUTF16( const std::u16string & str );
+        std::optional< std::string >    FromUTF32( const std::u32string & str );
     }
 }
 
