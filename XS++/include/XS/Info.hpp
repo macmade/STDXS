@@ -55,9 +55,9 @@ namespace XS
             
             void addChild( const Info & child );
             
-            void label( const std::string & label );
-            void value( const std::string & value );
-            void value( const std::vector< Info > & children );
+            void label(    const std::string & label );
+            void value(    const std::string & value );
+            void children( const std::vector< Info > & children );
             
             std::string         label()    const;
             std::string         value()    const;

@@ -98,7 +98,7 @@ namespace XS
         this->impl->_value = value;
     }
     
-    void Info::value( const std::vector< Info > & children )
+    void Info::children( const std::vector< Info > & children )
     {
         this->impl->_children = children;
     }
