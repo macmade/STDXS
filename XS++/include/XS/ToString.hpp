@@ -59,16 +59,20 @@ namespace XS
             >
             ::type * = nullptr
         >
-        std::string Hex( _T_ value )
+        std::string Hex( _T_ value, bool addPrefix = true )
         {
             std::stringstream ss;
             
-            ss << "0x"
-               << std::setfill( '0' )
+            if( addPrefix )
+            {
+                ss << "0x";
+            }
+            
+            ss << std::setfill( '0' )
                << std::setw( sizeof( _T_ ) * 2 )
                << std::hex
                << std::uppercase
-               << value;
+               << static_cast< uint64_t >( value );
             
             return ss.str();
         }
