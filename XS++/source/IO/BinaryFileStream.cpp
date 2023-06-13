@@ -51,7 +51,7 @@ namespace XS
                 Endianness    _endianness;
         };
         
-        BinaryFileStream::BinaryFileStream( std::string path ):
+        BinaryFileStream::BinaryFileStream( const std::string & path ):
             impl( std::make_unique< IMPL >( path ) )
         {}
         

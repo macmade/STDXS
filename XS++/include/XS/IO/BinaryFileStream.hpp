@@ -45,7 +45,7 @@ namespace XS
         {
             public:
                 
-                BinaryFileStream( std::string path );
+                BinaryFileStream( const std::string & path );
                 
                 virtual ~BinaryFileStream() override;
                 
