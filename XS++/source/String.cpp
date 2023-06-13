@@ -62,7 +62,14 @@ namespace XS
         {
             try
             {
+                #ifdef __clang__
+                #pragma clang diagnostic push
+                #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                #endif
                 std::wstring_convert< std::codecvt_utf8< char16_t >, char16_t > c;
+                #ifdef __clang__
+                #pragma clang diagnostic pop
+                #endif
                 
                 return c.from_bytes( str );
             }
@@ -76,7 +83,14 @@ namespace XS
         {
             try
             {
+                #ifdef __clang__
+                #pragma clang diagnostic push
+                #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                #endif
                 std::wstring_convert< std::codecvt_utf8< char32_t >, char32_t > c;
+                #ifdef __clang__
+                #pragma clang diagnostic pop
+                #endif
                 
                 return c.from_bytes( str );
             }
@@ -90,7 +104,14 @@ namespace XS
         {
             try
             {
+                #ifdef __clang__
+                #pragma clang diagnostic push
+                #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                #endif
                 std::wstring_convert< std::codecvt_utf8< char16_t >, char16_t > c;
+                #ifdef __clang__
+                #pragma clang diagnostic pop
+                #endif
                 
                 return c.to_bytes( str );
             }
@@ -104,7 +125,14 @@ namespace XS
         {
             try
             {
+                #ifdef __clang__
+                #pragma clang diagnostic push
+                #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                #endif
                 std::wstring_convert< std::codecvt_utf8< char32_t >, char32_t > c;
+                #ifdef __clang__
+                #pragma clang diagnostic pop
+                #endif
                 
                 return c.to_bytes( str );
             }
