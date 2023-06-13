@@ -39,6 +39,7 @@ namespace XS
             IMPL( const std::string & label );
             IMPL( const std::string & label, const std::string & value );
             IMPL( const std::string & label, const std::vector< Info > & children );
+            IMPL( const std::string & label, const std::string & value, const std::vector< Info > & children );
             IMPL( const IMPL & o );
             
             std::string         _label;
@@ -56,6 +57,10 @@ namespace XS
     
     Info::Info( const std::string & label, const std::vector< Info > & children ):
         impl( std::make_unique< IMPL >( label, children ) )
+    {}
+    
+    Info::Info( const std::string & label, const std::string & value, const std::vector< Info > & children ):
+        impl( std::make_unique< IMPL >( label, value, children ) )
     {}
     
     Info::Info( const Info & o ):
@@ -219,6 +224,12 @@ namespace XS
     
     Info::IMPL::IMPL( const std::string & label, const std::vector< Info > & children ):
         _label( label ),
+        _children( children )
+    {}
+    
+    Info::IMPL::IMPL( const std::string & label, const std::string & value, const std::vector< Info > & children ):
+        _label( label ),
+        _value( value ),
         _children( children )
     {}
     

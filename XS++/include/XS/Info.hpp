@@ -45,6 +45,7 @@ namespace XS
             Info( const std::string & label );
             Info( const std::string & label, const std::string & value );
             Info( const std::string & label, const std::vector< Info > & children );
+            Info( const std::string & label, const std::string & value, const std::vector< Info > & children );
             Info( const Info & o );
             Info( Info && o ) noexcept;
             
