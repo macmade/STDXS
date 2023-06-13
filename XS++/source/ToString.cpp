@@ -126,5 +126,40 @@ namespace XS
             
             return buf;
         }
+        
+        std::string HexData( const std::vector< uint8_t > & data )
+        {
+            std::stringstream ss;
+            
+            for( auto b: data )
+            {
+                ss << std::setfill( '0' )
+                   << std::setw( 2 )
+                   << std::hex
+                   << std::uppercase
+                   << static_cast< uint64_t >( b );
+            }
+            
+            return ss.str();
+        }
+        
+        std::string AsciiData( const std::vector< uint8_t > & data )
+        {
+            std::stringstream ss;
+            
+            for( auto b: data )
+            {
+                if( std::isprint( b ) )
+                {
+                    ss << b;
+                }
+                else
+                {
+                    ss << ".";
+                }
+            }
+            
+            return ss.str();
+        }
     }
 }

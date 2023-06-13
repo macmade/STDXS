@@ -48,6 +48,8 @@ namespace XS
         std::string DateTime( uint64_t value );
         std::string DateTime( int32_t value );
         std::string DateTime( int64_t value );
+        std::string HexData( const std::vector< uint8_t > & data );
+        std::string AsciiData( const std::vector< uint8_t > & data );
         
         template
         <
