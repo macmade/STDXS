@@ -170,14 +170,14 @@ namespace XS
         
             if( this->supportsColors() )
             {
-                ::attrset( COLOR_PAIR( color.index() ) );
+                ::attrset( static_cast< int >( COLOR_PAIR( color.index() ) ) );
             }
             
             ::printw( s.c_str() );
 
             if( this->supportsColors() )
             {
-                ::attrset( COLOR_PAIR( Color::clear().index() ) );
+                ::attrset( static_cast< int >( COLOR_PAIR( Color::clear().index() ) ) );
             }
         }
         

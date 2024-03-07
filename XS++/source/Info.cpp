@@ -29,6 +29,7 @@
 
 #include <XS/Info.hpp>
 #include <sstream>
+#include <functional>
 
 namespace XS
 {

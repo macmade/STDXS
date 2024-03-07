@@ -101,14 +101,14 @@ namespace XS
         {
             if( Screen::shared().supportsColors() )
             {
-                ::wattrset( this->impl->_win, COLOR_PAIR( color.index() ) );
+                ::wattrset( this->impl->_win, static_cast< int >( COLOR_PAIR( color.index() ) ) );
             }
             
             ::wprintw( this->impl->_win, s.c_str() );
             
             if( Screen::shared().supportsColors() )
             {
-                ::wattrset( this->impl->_win, COLOR_PAIR( Color::clear().index() ) );
+                ::wattrset( this->impl->_win, static_cast< int >( COLOR_PAIR( Color::clear().index() ) ) );
             }
         }
         
@@ -120,14 +120,14 @@ namespace XS
             
             if( Screen::shared().supportsColors() )
             {
-                ::wattrset( this->impl->_win, COLOR_PAIR( color.index() ) );
+                ::wattrset( this->impl->_win, static_cast< int >( COLOR_PAIR( color.index() ) ) );
             }
             
             ::vw_printw( this->impl->_win, format, ap );
             
             if( Screen::shared().supportsColors() )
             {
-                ::wattrset( this->impl->_win, COLOR_PAIR( Color::clear().index() ) );
+                ::wattrset( this->impl->_win, static_cast< int >( COLOR_PAIR( Color::clear().index() ) ) );
             }
             
             va_end( ap );
