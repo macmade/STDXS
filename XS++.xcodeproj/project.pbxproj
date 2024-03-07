@@ -26,6 +26,8 @@
 		05C8C49724B5176B0095E313 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C49524B5176B0095E313 /* Window.cpp */; };
 		05C8C49A24B517860095E313 /* Window.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49824B517860095E313 /* Window.hpp */; };
 		05C8C49B24B517860095E313 /* Screen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05C8C49924B517860095E313 /* Screen.hpp */; };
+		05F076F52B9A79F9003AD213 /* BinaryMemoryStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05F076F42B9A79F9003AD213 /* BinaryMemoryStream.hpp */; };
+		05F076F62B9A79F9003AD213 /* BinaryMemoryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F076F32B9A79F9003AD213 /* BinaryMemoryStream.cpp */; };
 		05F15FB924B63C4400CA134E /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05F15FB724B63C4400CA134E /* String.cpp */; };
 		05F15FBA24B63C4400CA134E /* String.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05F15FB824B63C4400CA134E /* String.hpp */; };
 /* End PBXBuildFile section */
@@ -95,6 +97,8 @@
 		05C8C49524B5176B0095E313 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		05C8C49824B517860095E313 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		05C8C49924B517860095E313 /* Screen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
+		05F076F32B9A79F9003AD213 /* BinaryMemoryStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryMemoryStream.cpp; sourceTree = "<group>"; };
+		05F076F42B9A79F9003AD213 /* BinaryMemoryStream.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryMemoryStream.hpp; sourceTree = "<group>"; };
 		05F15FB724B63C4400CA134E /* String.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
 		05F15FB824B63C4400CA134E /* String.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = String.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,6 +304,7 @@
 			children = (
 				05C8C46F24B510700095E313 /* BinaryFileStream.cpp */,
 				05C8C47024B510700095E313 /* BinaryDataStream.cpp */,
+				05F076F32B9A79F9003AD213 /* BinaryMemoryStream.cpp */,
 				05C8C47124B510700095E313 /* BinaryStream.cpp */,
 			);
 			path = IO;
@@ -310,6 +315,7 @@
 			children = (
 				05C8C47624B510760095E313 /* BinaryFileStream.hpp */,
 				05C8C47724B510760095E313 /* BinaryDataStream.hpp */,
+				05F076F42B9A79F9003AD213 /* BinaryMemoryStream.hpp */,
 				05C8C47824B510760095E313 /* BinaryStream.hpp */,
 			);
 			path = IO;
@@ -352,6 +358,7 @@
 				05C8C49A24B517860095E313 /* Window.hpp in Headers */,
 				05C8C48B24B514070095E313 /* ToString.hpp in Headers */,
 				05C8C49324B5155D0095E313 /* Color.hpp in Headers */,
+				05F076F52B9A79F9003AD213 /* BinaryMemoryStream.hpp in Headers */,
 				05C8C47B24B510760095E313 /* BinaryStream.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +428,7 @@
 				05C8C49724B5176B0095E313 /* Window.cpp in Sources */,
 				05C8C48924B513690095E313 /* Info-Object.cpp in Sources */,
 				05C8C48624B512730095E313 /* Info.cpp in Sources */,
+				05F076F62B9A79F9003AD213 /* BinaryMemoryStream.cpp in Sources */,
 				05C8C47424B510700095E313 /* BinaryStream.cpp in Sources */,
 				05C8C47224B510700095E313 /* BinaryFileStream.cpp in Sources */,
 			);

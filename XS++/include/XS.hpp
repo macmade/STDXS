@@ -35,6 +35,7 @@
 #include <XS/IO/BinaryStream.hpp>
 #include <XS/IO/BinaryFileStream.hpp>
 #include <XS/IO/BinaryDataStream.hpp>
+#include <XS/IO/BinaryMemoryStream.hpp>
 #include <XS/String.hpp>
 #include <XS/ToString.hpp>
 #include <XS/UI/Color.hpp>
