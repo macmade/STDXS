@@ -61,6 +61,11 @@ namespace XS
         
         std::vector< uint8_t > BinaryStream::read( size_t size )
         {
+            if( size == 0 )
+            {
+                return {};
+            }
+
             std::vector< uint8_t > data( size, 0 );
             
             this->read( &( data[ 0 ] ), size );

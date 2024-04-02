@@ -84,6 +84,11 @@ namespace XS
         
         void BinaryMemoryStream::read( uint8_t * buf, size_t size )
         {
+            if( size == 0 )
+            {
+                return;
+            }
+
             memcpy( buf, this->impl->_data + this->impl->_pos, size );
             
             this->impl->_pos += size;

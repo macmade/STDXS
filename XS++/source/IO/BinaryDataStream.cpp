@@ -89,6 +89,11 @@ namespace XS
         
         void BinaryDataStream::read( uint8_t * buf, size_t size )
         {
+            if( size == 0 )
+            {
+                return;
+            }
+            
             if( size > this->impl->_data.size() - this->impl->_pos )
             {
                 throw std::runtime_error( "Invalid read - Not enough data available" );
