@@ -79,6 +79,18 @@ namespace XS
             return path.substr( pos + 1 );
         }
         
+        std::string DirectoryName( const std::string & path )
+        {
+            size_t pos( path.rfind( '/' ) );
+            
+            if( pos == std::string::npos )
+            {
+                return path;
+            }
+            
+            return path.substr( 0, pos + 1 );
+        }
+        
         std::string UUID( const uint8_t * bytes )
         {
             std::stringstream ss;

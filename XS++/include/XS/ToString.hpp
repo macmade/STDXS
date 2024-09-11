@@ -43,6 +43,7 @@ namespace XS
     {
         std::string Size( uint64_t size );
         std::string Filename( const std::string & path );
+        std::string DirectoryName( const std::string & path );
         std::string UUID( const uint8_t * bytes );
         std::string DateTime( uint32_t value );
         std::string DateTime( uint64_t value );
