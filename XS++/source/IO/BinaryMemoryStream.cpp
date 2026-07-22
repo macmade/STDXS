@@ -29,6 +29,7 @@
 
 #include <fstream>
 #include <cmath>
+#include <cstring>
 #include <vector>
 #include <XS/IO/BinaryMemoryStream.hpp>
 #include <XS/Casts.hpp>

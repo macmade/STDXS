@@ -29,6 +29,7 @@
 
 #include <XS/ToString.hpp>
 #include <XS/Casts.hpp>
+#include <cstring>
 
 namespace XS
 {

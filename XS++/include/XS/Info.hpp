@@ -35,6 +35,7 @@
 #include <variant>
 #include <vector>
 #include <ostream>
+#include <memory>
 
 namespace XS
 {
