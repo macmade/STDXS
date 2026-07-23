@@ -29,6 +29,8 @@
 
 #include <XS/UI/Screen.hpp>
 #include <algorithm>
+#include <string>
+#include <cstring>
 #include <ncurses.h>
 #include <sys/ioctl.h>
 #include <unistd.h>

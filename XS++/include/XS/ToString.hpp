@@ -31,6 +31,7 @@
 #define XS_TO_STRING_HPP
 
 #include <type_traits>
+#include <cstdint>
 #include <ios>
 #include <sstream>
 #include <iomanip>
